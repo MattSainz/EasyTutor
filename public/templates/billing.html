@@ -1,0 +1,68 @@
+<ion-view title="Settings">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div class="row">
+            <h3 class="hr">Address &nbsp <label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+        </div>
+        <div class="row" class="label">
+            <span class="label">{{user.address}}</span>
+        </div>
+
+        <div class="row">
+            <h3 class="hr">State &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+        </div>
+        <div class="row">
+            <span class="label">{{user.state}}</span>
+        </div>
+
+        <div class="row">
+            <h3 class="hr">Zip &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+        </div>
+        <div class="row">
+            <span class="label">{{user.zip}}</span>
+        </div>
+
+        <div ng-show="user.student" style="margin-top: 0">
+            <div class="row">
+                <h3 class="hr">Credit Card &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+            </div>
+            <div class="row">
+                <span class="label">{{user.creditCard}} &nbsp {{user.svg}}</span>
+            </div>
+        </div>
+
+        <div ng-show="user.tutor">
+            <div class="row">
+                <h3 class="hr">Routing Number &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+            </div>
+            <div class="row">
+                <span class="label">{{user.routingNumber}} &nbsp {{user.svg}}</span>
+            </div>
+            <div class="row">
+                <h3 class="hr">Bank Account &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label> </h3>
+            </div>
+            <div class="row">
+                <span class="label">{{user.bankAccount}} &nbsp {{user.svg}}</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+    #sessionName{
+        font-size: 40px;
+    }
+    .label{
+        margin-bottom: 12px;
+    }
+    .hr{
+        padding: 0;
+        margin-top:0;
+        margin-bottom: 0;
+    }
+    .link{
+        margin-top: 8px;
+        color: #11c1f3;
+    }
+    label{
+       font-size: 18px;
+    }
+</style>

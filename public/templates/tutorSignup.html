@@ -1,0 +1,28 @@
+<ion-view title="Tutor Signup">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div id="classSelect" style="">
+            <h5 style="float:left;">Select or add classes you can tutor</h5> <button ng-click="add()" style="float:right; margin-right: 4px" class="ion-plus"></button>
+        </div>
+        <div class="spacer" style="width: 300px; height: 38px;"></div>
+        <ion-checkbox ng-repeat="cl in data.classList" ng-model="cl.checked">{{cl.class}}</ion-checkbox>
+        <div ng-hide="showPersional">
+        <h5>Info</h5>
+            <form class="list" >
+                <label class="item item-input">
+                    <span class="input-label">Grade</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">School</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Rate</span>
+                    <input type="number" placeholder="">
+                </label>
+            </form>
+        </div>
+        <div class="spacer" style="width: 300px; height: 100%"></div>
+        <button class="button button-stable button-block " ng-click="next()">Next</button>
+    </ion-content>
+</ion-view>

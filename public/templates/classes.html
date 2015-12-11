@@ -1,0 +1,24 @@
+<ion-view title="Settings">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div ng-show="user.student" style="margin-bottom: 12px">
+            <div style="margin-bottom: 12px">
+                <span >Classes You Need Help In &nbsp&nbsp <i style="color:#11c1f3" class="icon ion-plus"></i></span>
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="c in user.needsHelpIn">
+                   {{c.class}}
+                </ion-item>
+            </ion-list>
+        </div>
+        <div ng-show="user.tutor">
+            <div style="margin-bottom: 12px">
+                <span >Classes You Can Teach</span>
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="c in user.canTeach">
+                   {{c.class}}
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

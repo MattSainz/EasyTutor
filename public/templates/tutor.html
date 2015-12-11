@@ -1,0 +1,73 @@
+<ion-view title="Tutor">
+  <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+    <div>
+      <div class="row" id="picture">
+        <img ng-src="{{image}}" style="border-radius:50%;">
+      </div>
+      <div class="spacer" style="width: 300px; height: 180px;"></div>
+      <div class="row" id="name">
+        <h1>{{tutor.name}}</h1>
+      </div>
+      <hr>
+      <div class="row">
+        <h3 id="teachesHr">Teaches</h3>
+      </div>
+      <div class="row" id="teaches">
+        <span ng-repeat="c in tutor.classes">{{c.class}}&nbsp </span>
+      </div>
+      <div class="row">
+        <h3 id="bioHr">Bio</h3>
+      </div>
+      <div class="row" id="bio">
+        <p>
+          {{tutor.bio}}
+        </p>
+      </div>
+      <div class="row"><h3 id="ratingHr">Rating</h3></div>
+      <div class="row" id="rating">
+        <div class="col-1" ng-bind-html="getStars(tutor.rating)"></div>
+      </div>
+      <div class="row"><h3 id="hoursHr">Hours</h3></div>
+      <div class="row" id="hours">{{tutor.hours}}</div>
+
+      <div class="row"><h3 id="rateHr">Rate</h3></div>
+      <div class="row" id="rate">${{tutor.rate}}&nbsp pr/hr</div>
+    </div>
+    <div class="spacer" style="width: 300px; height: 20px;"></div>
+    <button class="button button-stable button-block " ng-click="reserveTutor()">Reserve Tutor</button>
+
+  </ion-content>
+</ion-view>
+<style>
+  #picture {
+    vertical-align: middle;
+    width: 100%;
+    left: 50%;
+    position: absolute;
+    margin-left: -70px;
+  }
+
+  #name {
+    float: left;
+    top: 200px;
+    padding-bottom: 0;
+  }
+
+  #teaches, #bio {
+    margin-left: 2px;
+  }
+
+  #teaches {
+    margin-bottom: 8px;
+  }
+
+  #teachesHr, #bioHr, #ratingHr, #hoursHr, #ratingHr {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  #rating, #hours {
+    margin-bottom: 8px;
+  }
+
+</style>

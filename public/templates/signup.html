@@ -1,0 +1,14 @@
+<ion-view title="Signup">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div style="text-align:center;">
+            <h1>Who are you?</h1>
+        </div>
+        <div class="spacer" style="height: 100px;"></div>
+        <form class="list">
+            <ion-toggle toggle-class="toggle-positive" ng-model="data.student">Student</ion-toggle>
+            <ion-toggle toggle-class="toggle-positive" ng-model="data.tutor">Tutor</ion-toggle>
+        </form>
+        <div class="spacer" style="width: 300px; height: 141px;"></div>
+        <button class="button button-stable button-block" ng-click="continue()">Continue</button>
+    </ion-content>
+</ion-view>

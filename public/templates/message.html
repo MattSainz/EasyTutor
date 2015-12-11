@@ -1,0 +1,22 @@
+<ion-view title="Session">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+
+
+    <div class="row">
+        <div class="col">
+            <label class="item item-input" style="padding-top: 0; padding-bottom: 0">
+                   <span class="input-label">Message</span>
+                 <input ng-model="data.text" type="text" placeholder="">
+                <button ng-click="$scope.send()" style="padding: 0; margin: 0; width: 100px" class="button button-stable button-block" >Send</button>
+            </label>
+        </div>
+    </div>
+    <ion-list>
+         <ion-item ng-repeat="c in conversation">
+             <div class="row">
+                 {{c.user}}: &nbsp {{c.text}}
+             </div>
+        </ion-item>
+    </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,66 @@
+<ion-view title="Session">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div class="row" >
+            <h1 id="sessionName">{{tutor.name}}</h1>
+        </div>
+        <div class="row">
+            <h3 id="locationHr">Location</h3>
+        </div>
+        <div class="row" id="location">
+            <div class="col">
+            <label class="item item-input">
+                <span class="input-label">Location</span>
+                <input ng-model="data.location" type="text" placeholder="">
+            </label>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="timeHr">Time</h3>
+        </div>
+        <div class="row" id="time">
+            <div class="col">
+                <label class="item item-input">
+                    <span class="input-label">Date</span>
+                    <input ng-model="data.date" type="date" placeholder="">
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-input">
+                    <span class="input-label">Time</span>
+                    <input ng-model="data.time" type="text" placeholder="">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="notesHr">Notes</h3>
+        </div>
+        <div class="row" id="notes">
+            <div class="col">
+            <label class="item item-input">
+                <span class="input-label">Notes</span>
+                <input ng-model="data.notes" type="text" placeholder="">
+            </label>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <div class="row">
+            <div class="col">
+                <button class="button button-stable button-block " ng-click="cancel()">Cancel</button>
+            </div>
+            <div class="col">
+                <button class="button button-stable button-block " ng-click="hire()">Hire</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+   #sessionName{
+       font-size: 80px;
+   }
+    #locationHr, #timeHr, #notesHr{
+        margin-left: 4px;
+    }
+    #location, #time{
+        margin-bottom: 12px;
+    }
+</style>

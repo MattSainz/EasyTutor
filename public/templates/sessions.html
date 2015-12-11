@@ -1,0 +1,45 @@
+<ion-view title="Sessions">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div style="margin-bottom: 12px">
+            <label>Upcoming Sessions</label>
+            <ion-list>
+                <ion-item ng-click="loadSession(session)" ng-repeat="session in upcomingSessions">
+                    <div class="row">
+                        <div style="width: 100%">
+                            <h3>{{session.tutor.name}}</h3>
+                        </div>
+                        <div>
+                            {{session.date | date : 'shortDate'}}
+                        </div>
+                    </div>
+                </ion-item>
+                <section ng-if="upcomingSessions.length == 0">
+                    <ion-item>
+                        <h3>No Upcoming Sessions</h3>
+                    </ion-item>
+                </section>
+            </ion-list>
+        </div>
+
+        <div>
+        <label>Past Sessions</label>
+            <ion-list>
+                <ion-item ng-click="loadSession(session)" ng-repeat="session in pastSessions">
+                     <div class="row">
+                         <div style="width: 100%">
+                              <h3>{{session.tutor.name}}</h3>
+                         </div>
+                         <div >
+                              ${{session.tutor.rate}}
+                         </div>
+                     </div>
+                </ion-item>
+                <section ng-if="pastSessions.length == 0">
+                    <ion-item>
+                        <h3>No Past Sessions</h3>
+                    </ion-item>
+                </section>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

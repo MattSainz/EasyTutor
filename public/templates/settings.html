@@ -1,0 +1,60 @@
+<ion-view title="Settings">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div class="row" >
+            <h2 id="sessionName">{{user.name}}</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <h3 class="hr" style="width: 100%">School &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+        </div>
+        <div class="row" class="label">
+            <span class="label">{{user.school}}</span>
+        </div>
+        <div class="row">
+            <h3 style="width: 100%" class="hr">Status &nbsp<label style=" color: #11c1f3; float:right; font-size: 18px">edit</label></h3>
+        </div>
+        <div class="row">
+            <span class="label">{{ (user.student) ? ((user.tutor) ? 'Both' : 'Student' ) : 'Tutor'}}</span>
+        </div>
+        <div class="row">
+            <h3 class="hr">Configuration</h3>
+        </div>
+        <div class="row link" style="margin-top: 4px" >
+            <label ng-click="billing()" id="Billing">Billing <i class="icon ion-chevron-right"></i></label>
+        </div>
+        <div class="row link">
+            <label ng-click="classes()" id="classesHr">Classes <i class="icon ion-chevron-right"></i></label>
+        </div>
+        <div class="row link">
+            <label ng-click="appSettings()" id="appHr">App Settings <i class="icon ion-chevron-right"></i></label>
+        </div>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+        <div class="row" style="padding: 0">
+            <div class="col">
+                <button ng-click="bye()" class="button button-stable button-block" >Logout</button>
+            </div>
+            <div class="col">
+                <button ng-click="bye()" class="button button-assertive button-block" >Delete Account</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+    #sessionName{
+        font-size: 40px;
+    }
+    .label{
+        margin-bottom: 12px;
+    }
+    .hr{
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .link{
+        margin-top: 8px;
+        color: #11c1f3;
+    }
+    label{
+       font-size: 18px;
+    }
+</style>

@@ -1,0 +1,21 @@
+<ion-view title="Sign In">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <form class="list">
+            <div style="text-align:center;">
+                <h1>Easy Tutor</h1>
+            </div>
+            <div class="spacer" style="width: 300px; height: 91px;"></div>
+            <label class="item item-input">
+                <span class="input-label">User Name</span>
+                <input ng-model="data.name" type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="">
+            </label>
+        </form>
+        <button class="button button-stable button-block" ng-click="signUp()">Sign up</button>
+        <button class="button button-stable button-block" ng-click="login()">Login</button>
+        <button class="button button-stable button-block" ng-click="login()">Browse</button>
+    </ion-content>
+</ion-view>

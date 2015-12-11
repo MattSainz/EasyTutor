@@ -1,0 +1,24 @@
+<ion-view title="Messages">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+            <div style="margin-bottom: 12px">
+            <label>Messages</label>
+            <ion-list>
+                <ion-item ng-click="loadMessage(session)" ng-repeat="session in sessions">
+                    <div class="row">
+                        <div style="width: 100%">
+                            <h3>{{session.tutor.name}}</h3>
+                        </div>
+                        <div>
+                            {{session.date | date : 'shortDate'}}
+                        </div>
+                    </div>
+                </ion-item>
+                <section ng-if="sessions.length == 0">
+                    <ion-item>
+                        <h3>No Messages</h3>
+                    </ion-item>
+                </section>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

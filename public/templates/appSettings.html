@@ -1,0 +1,35 @@
+<ion-view title="Settings">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+
+        <div class="row" style="margin-bottom: 12px">
+            <h3 class="hr">Language</h3>
+        </div>
+        <div class="row" class="label">
+            <span class="label" style="font-size: 20px">English</span>
+        </div>
+        <div class="space" style="height:200px"></div>
+        <ion-toggle toggle-class="toggle-calm">Notifications</ion-toggle>
+        <ion-toggle toggle-class="toggle-calm">Share Location</ion-toggle>
+        <ion-toggle ng-show="user.tutor" toggle-class="toggle-calm">Available</ion-toggle>
+
+    </ion-content>
+</ion-view>
+<style>
+    #sessionName{
+        font-size: 40px;
+    }
+    .label{
+        margin-bottom: 12px;
+    }
+    .hr{
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .link{
+        margin-top: 8px;
+        color: #11c1f3;
+    }
+    label{
+       font-size: 18px;
+    }
+</style>

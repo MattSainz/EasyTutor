@@ -1,0 +1,23 @@
+<ion-view title="Student Signup">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+
+        <div id="classSelect" style="">
+            <h5 style="float:left;">Select what you are interested in</h5> <button ng-click="add()" style="float:right; margin-right: 4px" class="ion-plus"></button>
+        </div>
+        <div class="spacer" style="width: 300px; height: 38px;"></div>
+        <ion-checkbox ng-repeat="cl in data.classList" ng-model="cl.checked">{{cl.class}}</ion-checkbox>
+        <h5>Persional Info</h5>
+        <form class="list">
+            <label class="item item-input">
+                <span class="input-label">Grade</span>
+                <input ng-model="data.grade" type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">School</span>
+                <input ng-model="data.school" type="text" placeholder="">
+            </label>
+        </form>
+        <div class="spacer" style="width: 300px; height: 26px;"></div>
+        <button class="button button-stable button-block " ng-click="next()">Next</button>
+    </ion-content>
+</ion-view>

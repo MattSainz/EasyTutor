@@ -1,0 +1,54 @@
+<ion-view title="Session">
+    <ion-content overflow-scroll="true" padding="'true'" class="has-header">
+        <div class="row" >
+            <h2 id="sessionName">Session With {{session.tutor.name}}</h2>
+        </div>
+        <div class="row">
+            <h3 id="locationHr">Location</h3>
+        </div>
+        <div class="row" id="location">
+            <div class="col">
+                <span>{{(session.location) ? session.location : 'n/a'}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="timeHr">Time</h3>
+        </div>
+        <div class="row" id="time">
+            <div class="col">
+                <span class="input-label">{{session.date | date : 'shortDate'}}&nbsp{{session.time}}</span>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12223.707417455758!2d-105.2487484!3d40.0100814!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1449833230932" width="360" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="row">
+            <h3 id="notesHr">Notes</h3>
+        </div>
+        <div class="row" id="notes">
+            <div class="col">
+               <span class="input-label">{{(session.notes) ? session.notes : 'n/a'}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="costHr">Cost</h3>
+        </div>
+        <div class="row" id="cost">
+            <div class="col">
+               <span class="input-label">${{session.tutor.rate}}</span>
+            </div>
+        </div>
+        <button class="button button-stable button-block" ng-click="messageTutor()">Message</button>
+        <button class="button button-stable button-block" ng-click="cancel()">Cancel</button>
+    </ion-content>
+</ion-view>
+<style>
+    #sessionName{
+        font-size: 40px;
+    }
+    #locationHr, #timeHr, #notesHr, #costHr{
+        margin-left: 4px;
+        margin-bottom: 0;
+    }
+    #location, #time{
+        margin-bottom: 0;
+    }
+</style>
