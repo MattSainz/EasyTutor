@@ -20,6 +20,8 @@ angular.module('app.controllers', [])
     };
 
     $scope.browse = function () {
+      user.name = 'No Name';
+      UserService.setUser(user);
       $state.go('tabsController.tutors');
     }
   }])
