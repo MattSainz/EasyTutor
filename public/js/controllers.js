@@ -245,6 +245,7 @@ angular.module('app.controllers', [])
             rate: 10,
             classes: [
               {class: 'Biology', rate: 20},
+              {class: 'Physics', rate: 20},
               {class: 'Data Structures', rate: 30}
             ]
           },
