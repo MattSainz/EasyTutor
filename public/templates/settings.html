@@ -1,7 +1,7 @@
 <ion-view title="Settings">
     <ion-content overflow-scroll="true" padding="'true'" class="has-header">
         <div class="row" >
-            <h2 id="sessionName">{{user.name}}</h2>
+            <h2 id="sessionName">{{(user.name) ? user.name : 'No Name'}}</h2>
         </div>
         <hr>
         <div class="row">
